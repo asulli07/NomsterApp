@@ -130,20 +130,17 @@
   <div class="clear"></div>
   <br />
 
-
-<% @place.photos.each do |pic| %> 
-<div class="container">
 <div class="row">
-  <div class="booyah-box text-center">
-    <%= image_tag pic.picture %>
-    <p><%= pic.caption %></p>
-  </div>
-</div>
+
+<% @place.photos.each do |pic| %>
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+  <h2><%= image_tag pic.picture %></h2><br />
+  <p><%= pic.caption %>
 </div>
 <% end %>
 
-<div class="clear"></div>
-<br />
+</div>
+
 
 
 
