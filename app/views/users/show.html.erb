@@ -1,4 +1,15 @@
-<h1><%= @user.email %></h1>
-<h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
-<h3>Comment Count: <%= @user.comments.count %></h3>
-<h3>5 Star Reviews: <%= @user.comments.where(rating: '5_Stars').count %>
+
+<div class="booyah-box">
+  <div class="col-xs-4">
+    <%= image_tag 'person_5-128.png' %>
+  </div>
+
+  <div class="col-xs-8">
+    <h1><%= @user.email %></h1>
+    <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+    <h4><%= @user.comments.count %> total comments</h4>
+    <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+  </div>
+<div class="clear"></div>
+
+</div>
